@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#boulette
+**/github-ssh
+**/github-ssh.pub
+
 # testing
 /coverage
 
