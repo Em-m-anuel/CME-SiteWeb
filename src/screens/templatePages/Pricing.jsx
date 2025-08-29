@@ -1,6 +1,6 @@
-import PricingCard from "../composants/pricingCard";
-import Navbar from "../composants/Navbar";
-import Footer from "../composants/Footer";
+import PricingCard from "../../composants/composantTemplate/pricingCard";
+import Navbar from "../../composants/Navbar";
+import Footer from "../../composants/Footer";
 function Pricing(){
     return (
         

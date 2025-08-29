@@ -1,13 +1,17 @@
-import ArticleAuthors from "../composants/articleAuthor";
-import { BsArrowRightShort } from "react-icons/bs";
-import PostCard from "../composants/postCard";
-import { Link } from "react-router-dom";
-import Navbar from "../composants/Navbar";
-import Footer from "../composants/Footer";
-function Article(){
+import ArticleAuthors from "../../composants/articleAuthor";
+import Navbar from "../../composants/Navbar";
+import Footer from "../../composants/Footer";
+import Title from "../../composants/Title";
+
+function Article1(){
     return(
         <>
-            <Navbar/>
+            <Navbar props="Actualites"/>
+            <Title 
+                texth1="Actualités"
+                links={[{to:"/Blog",text :"Actualité"},{to:"#",text:"Article-1"}]}
+                bgImage={"/assets/img/projects/Law.jpg"}
+            />
             <section class="py-4 py-xl-5">
                 <div class="container">
                     <div class="row">
@@ -70,9 +74,7 @@ function Article(){
                                 src="../assets/img/team/avatar2.jpg"
                                 spanText="Billy Thomas"
                                 Textp="Dapibus donec suscipit dictumst, ac ligula ante. Blandit suspendisse nullam sagittis sapien phasellus, phasellus placerat."
-
                                 />
-
                                 <ArticleAuthors 
                                 linkClass="author-jenny-doe text-decoration-none text-body"
                                 linkDhref="/authors.html?author=jenny-doe"
@@ -81,29 +83,8 @@ function Article(){
                                 src="../assets/img/team/avatar2.jpg"
                                 spanText="Jenny Doe"
                                 Textp="Dapibus donec suscipit dictumst, ac ligula ante. Blandit suspendisse nullam sagittis sapien phasellus, phasellus placerat."
-
                                 />
-
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section>
-                <div class="container py-5">
-                    <div class="row mb-5 mb-lg-4">
-                        <div class="col text-center d-flex justify-content-between align-items-center mx-auto">
-                            <h3 class="fs-3 fw-bold mb-0 heading">Latest Posts</h3>
-                                <Link class="btn btn-primary btn-sm" role="button" to="/blog.html">See all&nbsp;
-                                    <BsArrowRightShort />
-                                </Link>
-                        </div>
-                    </div>
-                    <div data-bss-type="blog-loop">
-                        <div class="row gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3" data-bss-type="blog-loop-base">
-                            <PostCard className="post-tag-design post-author-billy-thomas" texth4="Reimagining Digital Design" textp="Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean." alt="The peak iOS mockup" src="assets/img/projects/project1.webp" time="Jan 12, 2025" datetime="2025-01-12" to="blog/article-1.html" />
-                            <PostCard className="post-tag-design  post-author-jenny-doe" texth4="Reimagining Digital Design" textp="Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean." alt="The peak iOS mockup" src="assets/img/projects/project1.webp" time="Jan 12, 2025" datetime="2025-01-12" to="blog/article-1.html" />
-                            <PostCard className="post-tag-design  post-author-jenny-doe" texth4="Reimagining Digital Design" textp="Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean." alt="The peak iOS mockup" src="assets/img/projects/project1.webp" time="Jan 12, 2025" datetime="2025-01-12" to="blog/article-1.html" />
                         </div>
                     </div>
                 </div>
@@ -114,4 +95,4 @@ function Article(){
     )
 }
 
-export default Article;
+export default Article1;

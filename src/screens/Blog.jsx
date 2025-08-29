@@ -1,39 +1,128 @@
 import PostCard from "../composants/postCard";
-import {Link} from "react-router-dom";
 import Navbar from "../composants/Navbar";
 import Footer from "../composants/Footer";
+import Title from "../composants/Title";
+
 function Blog(){
     return(
         <>
+            <Navbar props="Actualites"/>
 
-            <Navbar props="Blog"/>
-            <section>
+            <Title 
+                texth1="Blog & Actualités Juridiques"
+                links={[{to:"/",text :"Accueil"}, {to:"#",text :"Blog"}]}
+                bgImage={"/assets/img/projects/Law.jpg"}
+            />
+            
+            <section className="py-5 bg-light">
                 <div className="container py-5">
-                    <div className="row mb-4">
-                        <div className="col-md-8 col-xl-5 text-center mx-auto">
-                            <h1 className="display-5 fw-bold mb-3 heading">Blog</h1>
-                            <p>Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
+                    <div className="row mb-5">
+                        <div className="col-md-10 col-xl-8 text-center mx-auto">
+                            <h1 className="display-5 fw-bold mb-4 text-primary">Nos Dernières Actualités Juridiques</h1>
+                            <p className="lead text-muted lh-base">
+                                Retrouvez les dernières analyses juridiques, les évolutions législatives, les conseils de nos experts 
+                                et des éclairages pratiques pour sécuriser vos projets.
+                            </p>
                         </div>
                     </div>
-                    <div className="row mb-4 mb-lg-5">
-                        <div className="col-md-8 col-xl-5 mx-auto">
-                            <ul className="nav nav-pills d-flex justify-content-center flex-wrap" data-bss-type="tag-nav" data-bss-sync-url="true">
-                                <li className="nav-item tag-all" data-bss-type="tag-loop-item" data-bss-to="" data-bss-filter="blog" data-bss-filter-param="tag" data-bss-filter-value="" data-bss-tag=""><Link className="nav-link" to="" data-bss-state-node=""><span>All</span></Link></li>
-                                <li className="nav-item tag-design" data-bss-type="tag-loop-item" data-bss-to="" data-bss-filter="blog" data-bss-filter-param="tag" data-bss-filter-value="design" data-bss-tag="design"><Link className="nav-link" to="" data-bss-state-node=""><span>Design</span></Link></li>
-                                <li className="nav-item tag-digital" data-bss-type="tag-loop-item" data-bss-to="" data-bss-filter="blog" data-bss-filter-param="tag" data-bss-filter-value="digital" data-bss-tag="digital"><Link className="nav-link" to="" data-bss-state-node=""><span>Digital</span></Link></li>
-                            </ul>
-                        </div>
+                    
+                    <div className="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                        <PostCard 
+                            texth4="Réforme OHADA : Ce que les entreprises doivent savoir" 
+                            textp="Analyse des dernières modifications apportées à l'Acte uniforme OHADA et leurs impacts sur la gouvernance des entreprises." 
+                            alt="Réforme OHADA" 
+                            src="assets/img/projects/project1.webp" 
+                            time="15 Mars, 2025" 
+                            datetime="2025-03-15" 
+                            to="/Blog/Article-1" 
+                            tags={["OHADA","Droit des sociétés"]}
+                        />
+                        
+                        <PostCard 
+                            texth4="Fiscalité 2025 : Nouvelles obligations pour les PME" 
+                            textp="Découvrez les changements fiscaux en vigueur cette année et les stratégies pour rester en conformité." 
+                            alt="Fiscalité PME" 
+                            src="assets/img/projects/project1.webp" 
+                            time="10 Mars, 2025" 
+                            datetime="2025-03-10" 
+                            to="#" 
+                            tags={["Fiscalité","PME"]}
+                        />
+                        
+                        <PostCard 
+                            texth4="Protection des données : Comment éviter les sanctions ?" 
+                            textp="Les bonnes pratiques pour se conformer aux réglementations en matière de protection des données personnelles." 
+                            alt="Protection des données" 
+                            src="assets/img/projects/project1.webp" 
+                            time="5 Mars, 2025" 
+                            datetime="2025-03-05" 
+                            to="#" 
+                            tags={["RGPD","Compliance"]}
+                        />
+                        
+                        <PostCard 
+                            texth4="Contrats commerciaux : Clauses essentielles à maîtriser" 
+                            textp="Un guide complet pour sécuriser vos transactions et éviter les litiges." 
+                            alt="Contrats commerciaux" 
+                            src="assets/img/projects/project1.webp" 
+                            time="28 Février, 2025" 
+                            datetime="2025-02-28" 
+                            to="#" 
+                            tags={["Contrats","Business"]}
+                        />
+                        
+                        <PostCard 
+                            texth4="Arbitrage international : Une solution pour vos litiges" 
+                            textp="Pourquoi et comment recourir à l'arbitrage pour régler vos différends commerciaux ?" 
+                            alt="Arbitrage international" 
+                            src="assets/img/projects/project1.webp" 
+                            time="22 Février, 2025" 
+                            datetime="2025-02-22" 
+                            to="#" 
+                            tags={["Litiges","Arbitrage"]}
+                        />
+                        
+                        <PostCard 
+                            texth4="Jurisprudence récente en droit du travail" 
+                            textp="Tour d'horizon des décisions récentes impactant les relations employeurs-salariés." 
+                            alt="Droit du travail" 
+                            src="assets/img/projects/project1.webp" 
+                            time="18 Février, 2025" 
+                            datetime="2025-02-18" 
+                            to="#" 
+                            tags={["Droit du travail","Jurisprudence"]}
+                        />
                     </div>
-                    <div data-bss-type="blog-loop" data-bss-filters="[&quot;tag&quot;]" data-bss-empty-filter-actions="[{&quot;filter&quot;:&quot;tag&quot;,&quot;value&quot;:&quot;show-all&quot;}]"  style={{display : "none !important" }}>
-                        <div className="row gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3" data-bss-type="blog-loop-base">
-                            <PostCard texth4="Reimagining Digital Design" textp="Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean." alt="The peak iOS mockup" src="assets/img/projects/project1.webp" time="Jan 12, 2025" datetime="2025-01-12" to="blog/article-1.html" />
-                            <PostCard texth4="Reimagining Digital Design" textp="Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean." alt="The peak iOS mockup" src="assets/img/projects/project1.webp" time="Jan 12, 2025" datetime="2025-01-12" to="blog/article-1.html" />
-                            <PostCard texth4="Reimagining Digital Design Once Again" textp="Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean." alt="The peak iOS mockup" src="assets/img/projects/project1.webp" time="Jan 12, 2025" datetime="2025-01-12" to="blog/article-1.html" tags={["Design","Digital"]} />
-                            <PostCard texth4="Reimagining Digital Design" textp="Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean." alt="The peak iOS mockup" src="assets/img/projects/project1.webp" time="Jan 12, 2025" datetime="2025-01-12" to="blog/article-1.html" tags={["Design","Digital"]} />
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
+
+            <style jsx>
+                {`
+                .hover-link {
+                    transition: all 0.3s ease;
+                }
+                .hover-link:hover {
+                    color: var(--bs-primary) !important;
+                    transform: translateX(4px);
+                }
+                .arrow-icon {
+                    transition: transform 0.3s ease;
+                }
+                .hover-link:hover .arrow-icon {
+                    transform: translateX(4px);
+                }
+                .card {
+                    transition: all 0.3s ease;
+                }
+                .card:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+                }
+                .letter-spacing-1 {
+                    letter-spacing: 1px;
+                }
+            `}</style> 
 
             <Footer props="Blog"/>
         </>

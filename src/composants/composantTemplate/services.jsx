@@ -1,12 +1,20 @@
-import ServicesCard from "../composants/serviceCard"
+import ServicesCard from "../serviceCard";
+import { BsArrowRightShort } from "react-icons/bs";
+import { Link } from "react-router-dom";
 function Services(){
 
     return (
         <section>
             <div className="container py-5">
                 <div className="row mb-4">
-                    <div className="col-md-8 col-xl-5 text-center mx-auto"><small className="text-uppercase">What we offer</small>
-                        <h3 className="fs-2 fw-bold mb-4 heading">Our Services</h3>
+                    <div className="col-md-8 col-xl-5 text-center mx-auto">
+                        {/* <small className="text-uppercase">What we offer</small> */}
+                        <h3 className="fs-2 fw-bold mb-4 heading">Nos Services</h3>
+                        <Link to="/ServicesScreens">
+                            <button className="btn btn-primary" type="button">
+                                Voir plus&nbsp;<BsArrowRightShort />
+                            </button>
+                        </Link>
                     </div>
                 </div>
                 <div className="row">

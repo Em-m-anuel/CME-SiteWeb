@@ -1,4 +1,4 @@
-import ProcessSteps from "./processSteps"
+import ProcessSteps from "../processSteps"
 function Process(){
     return (
         <>

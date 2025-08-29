@@ -1,6 +1,6 @@
 import { BsArrowRightShort } from "react-icons/bs";
-import Navbar from "../composants/Navbar";
-import Footer from "../composants/Footer";
+import Navbar from "../../composants/Navbar";
+import Footer from "../../composants/Footer";
 function Error404(){
     return (
         <>
