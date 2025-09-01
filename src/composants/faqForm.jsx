@@ -1,14 +1,15 @@
-function FAQform({buttonData, divClass, buttonText, textp}){
+function FAQform({buttonData, divClass, buttonText, textp,onClick}){
     return (
         <div className="accordion-item border-0 mb-3 rounded-3 shadow-sm">
             <h2 className="accordion-header" role="tab">
                 <button 
-                    className="accordion-button fw-semibold text-dark bg-white rounded-3" 
+                    className="accordion-button fw-semibold text-dark  rounded-3" 
                     type="button" 
                     data-bs-toggle="collapse" 
                     data-bs-target={buttonData} 
                     aria-expanded="true" 
                     aria-controls={buttonData}
+                    onClick={onClick}
                 >
                     {buttonText}
                 </button>

@@ -1,34 +1,41 @@
 import Navbar from "../../composants/Navbar";
 import Footer from "../../composants/Footer";
 import Title from "../../composants/Title";
-import ExpertiseCard from "../../composants/ExpertiseCard";
+import InfoCard from "../../composants/InfoCard";
 function Expertise1(){
     return (
         <>
 
             <Navbar props={"Expertises"}/>
             <Title 
-            texth1="A propos"
-            links={[{to:"/Expertises",text :"Expertises"},{to:"",text:"Expertises-1"}]}
-            bgImage={"/assets/img/projects/Law.jpg"}
+            texth1="Droits des Sociétés"
+            links={[{to:"/Expertises",text :"Expertises"},{to:"",text:"Droits des Sociétés"}]}
+            bgImage={"/assets/img/services-expertises/Statue.jpg"}
             />
 
-            <ExpertiseCard 
-                src="/assets/img/team/avatar2.jpg" 
-                alt="African people shaking hand"
-                title="Droit des Sociétés, Fusion et Acquisition "
-                subtitle="DOMAINE D’INTERVENTION"
-                paragraphe="Grâce à notre connaissance approfondie de la culture d’entreprise
-                    et de l’écosystème de nos clients, entreprises OHADA, étrangères
-                    et publiques et privées, nous accompagnons toutes les opérations
-                    de fusions-acquisitions, en garantissant un service de haute
-                    valeur juridique et stratégique."
-                extrap={["Fusion et Acquisition, transfert restructurations, coentreprises,partenariats et alliances stratégiques, capital investissement,capital-risque et restructuration de fonds.",
-                    "Réorganisation des actifs, pactes d’actionnaires conformité,gouvernance et diligence raisonnable, litige, médiation et arbitrage entre actionnaire, direction et clients de la garantie."
+            <div className="py-5">
+                <hr style={{width: '80%', margin: '8px auto', border: 'none', borderTop: '3px dashed #020202ff'}}/>
+            </div>
+
+            <InfoCard
+                src="/assets/img/services-expertises/Reunion.jpg" 
+                alt="Réunion d'entreprise juridique"
+                title="Droit des Sociétés"
+                subtitle="Domaines d’intervention"
+                paragraphe="Nous accompagnons nos clients dans la création, la restructuration et la gestion juridique de leurs entreprises, en assurant la conformité avec les réglementations locales et internationales."
+                extrap={[
+                    "Constitution et transformation des sociétés (SARL, SA, GIE…).",
+                    "Rédaction des statuts, pactes d’actionnaires et conventions entre associés.",
+                    "Assistance en gouvernance d’entreprise et conformité réglementaire.",
+                    "Fusions, scissions, apports partiels d’actifs et réorganisations."
                 ]}
-            />
+                />
 
-            <Footer/>
+                <div className="py-5">
+                    <hr style={{width: '80%', margin: '8px auto', border: 'none', borderTop: '3px dashed #020202ff'}}/>
+                </div>
+
+            <Footer props={"Expertises"}/>
         </>
     )
 }

@@ -11,6 +11,12 @@ import ServicesScreens from './screens/Services';
 import Expertises from './screens/Expertises';
 import Expertise1 from './screens/subScreens/Expertise-1';
 import Service1 from './screens/subScreens/Services-1';
+import Service2 from './screens/subScreens/Services-2';
+import Service3 from './screens/subScreens/Services-3';
+import Service4 from './screens/subScreens/Services-4';
+import Expertise2 from './screens/subScreens/Expertise2';
+import Expertise3 from './screens/subScreens/Expertise3';
+import Expertise4 from './screens/subScreens/Expertise4';
 function Router(){
     return (
         <BrowserRouter>
@@ -28,6 +34,12 @@ function Router(){
                 <Route path={"/Expertises"} element={<Expertises/>} />
                 <Route path={"/Expertises/Expertise1"} element={<Expertise1/>} />
                 <Route path={"/ServicesScreens/Service1"} element={<Service1/>} />
+                <Route path={"/ServicesScreens/Service2"} element={<Service2/>} />
+                <Route path={"/ServicesScreens/Service3"} element={<Service3/>} />
+                <Route path={"/ServicesScreens/Service4"} element={<Service4/>} />
+                <Route path={"/Expertises/Expertise2"} element={<Expertise2/>} />
+                <Route path={"/Expertises/Expertise3"} element={<Expertise3/>} />
+                <Route path={"/Expertises/Expertise4"} element={<Expertise4/>} />
             </Routes>
             
         </BrowserRouter>

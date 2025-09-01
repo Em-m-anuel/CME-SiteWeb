@@ -1,46 +1,61 @@
 import { Link } from "react-router-dom";
-function Title({texth1,links=null,bgImage}){
-    return (
-        <section id="home" className="py-5 bg-light" 
-            style={{
-            backgroundImage: bgImage ? `url(${bgImage})` : "none",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            minHeight: "300px",
-            backgroundRepeat: "no-repeat"}}>
 
-            <div className=" py-4 mb-4" >
-                <div className="container">
-                    
-                    <div className="text-start" style={{
-                        backgroundColor: "rgba(143, 140, 140, 0.49)", 
-                        padding: "15px",
-                        borderRadius: "8px",
-                        display: "inline-block"}} >
-                       
-                        <h1 className="display-8 fw-bold mb-2" >
-                            {texth1}
-                        </h1>
+function Title({ texth1, links = null, bgImage }) {
+  return (
+    <section
+      id="home"
+      className="title-section d-flex align-items-center"
+      style={{
+        backgroundImage: bgImage
+          ? `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${bgImage})`
+          : "none",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "350px",
+        color: "#fff",
+        textAlign: "center",
+        position: "relative"
+      }}
+    >
+      <div className="container">
+        <h1 className="display-5 fw-bold mb-3 animate__animated animate__fadeInDown">
+          {texth1}
+        </h1>
 
-                        <nav aria-label="breadcrumb">
-                            <ol className="breadcrumb mb-0">
-                                {links &&(
-                                    links.map((link,index)=>(
-                                        <li className="breadcrumb-item" key={index}>
-                                            <Link to={link.to} className="text-decoration-none text-primary">
-                                            {link.text}
-                                            </Link>
-                                        </li>) 
-                                    )
-                                )}
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+        {links && (
+          <nav aria-label="breadcrumb">
+            <ol className="breadcrumb justify-content-center mb-0">
+              {links.map((link, index) => (
+                <li
+                  key={index}
+                  className={`breadcrumb-item ${
+                    index === links.length - 1 ? "active" : ""
+                  }`}
+                  style={{
+                    color: index === links.length - 1 ? "#f8f9fa" : "#ddd",
+                    fontWeight: index === links.length - 1 ? "bold" : "normal"
+                  }}
+                >
+                  {index === links.length - 1 ? (
+                    link.text
+                  ) : (
+                    <Link
+                      to={link.to}
+                      className="text-decoration-none"
+                      style={{ color: "#f8f9fa" }}
+                    >
+                      {link.text}
+                    </Link>
+                  )}
+                </li>
+              ))}
+            </ol>
+          </nav>
+        )}
+      </div>
 
-        </section>
-    )
+    </section>
+  );
 }
 
 export default Title;

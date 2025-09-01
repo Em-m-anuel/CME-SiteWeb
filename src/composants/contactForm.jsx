@@ -1,7 +1,7 @@
 // Contactform.jsx
 function Contactform({texth1, textp, textb}){
     return (
-        <section className="py-5 bg-light">
+        <section >
             <div className="container py-5">
                 <div className="row mb-5">
                     <div className="col-md-10 col-xl-8 text-center mx-auto">

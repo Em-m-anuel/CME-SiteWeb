@@ -1,45 +1,56 @@
-function ExpertiseCard({src,alt,title,paragraphe,extrap=null,subtitle}){
-    return(
-        <section>
-            <div className="container  my-5">
-                <div className="row justify-content-center">
-                    <div className="col-lg-10 ">
-                        <div className="card shadow-sm mb-4 shadow-lg border-0">
-                            <img
-                            src={src}
-                            alt={alt}
-                            className="card-img-top"
-                            style={{ maxHeight: "300px", objectFit: "cover" }}
-                            />
+import { Link } from "react-router-dom";
+import { BsArrowRightShort } from "react-icons/bs";
+import '../style/ExpertiseCard.css';
 
-                            <div className="card-body text-center">
-                            <h3 className="card-title fw-bold mb-3">
-                                {title}
-                            </h3>
-                            <div className="card-text  text-muted text-start">
-                                <p>
-                                 {paragraphe}
-                                </p>
-                                <p>
-                                <strong>
-                                    {subtitle}
-                                </strong>
-                                </p>
 
-                                {extrap.map((extra,index) => (
-                                    <p key={index}>
-                                        {extra}
-                                    </p>
-                                    ) )
-                                }
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+function ExpertiseCard({ 
+  title, 
+  excerpt, 
+  imageUrl, 
+  link, 
+  icon
+ 
+}) {
+  return (
+    <div className="w-100 mb-4">
+      <div 
+        className="service-card"
+        
+      >
+        <Link to={link} className="service-card-link">
+          
+          <div className="service-image-container">
+            <img 
+              src={imageUrl}
+              alt={title}
+              className="service-image"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="service-content">
+            <h3 className="service-title">{title}</h3>
+            <p className="service-excerpt">{excerpt}</p>
+
+            
+            <div className="service-footer">
+              <span className="see-more">
+                Voir plus
+                <BsArrowRightShort size={20} className="arrow-icon" />
+              </span>
             </div>
-        </section> 
-    )
+          </div>
+
+          <div className="service-icon-overlay">
+            <div className="service-icon">
+              {icon}
+            </div>
+          </div>
+        </Link>
+      </div>
+
+    </div>
+  );
 }
 
 export default ExpertiseCard;

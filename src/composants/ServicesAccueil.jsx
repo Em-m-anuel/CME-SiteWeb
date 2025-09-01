@@ -1,6 +1,6 @@
 import { BsArrowRightShort } from "react-icons/bs";
 import { FaBuilding, FaHandshake, FaGavel } from "react-icons/fa";
-import ServicesCard from "../composants/serviceCard";
+import ServicesCard from "./ServiceCard";
 import { Link } from "react-router-dom";
 
 function ServicesAccueil(){
@@ -10,28 +10,33 @@ function ServicesAccueil(){
             description: "Création, restructuration et accompagnement juridique des entreprises.",
             color: "bg-info-subtle",
             icon: <FaBuilding className="text-primary" size={48} />,
-            to: "/Expertises/Expertise1"
+            to: "/ServicesScreens/Service1"
         },
         {
             title: "Contrats & Négociations",
             description: "Rédaction et sécurisation de vos contrats commerciaux et partenariats.",
             color: "bg-success-subtle",
             icon: <FaHandshake className="text-success" size={48} />,
-            to: "/Expertises/contrats"
+            to: "/ServicesScreens/Service2"
         },
         {
             title: "Contentieux & Arbitrage",
             description: "Représentation devant les juridictions et résolution des litiges.",
             color: "bg-warning-subtle",
             icon: <FaGavel className="text-danger" size={48} />,
-            to: "/Expertises/contentieux"
+            to: "/ServicesScreens/Service3"
         }
     ];
 
     return(
         <section className="py-5">
+
+            <div className="py-5">
+                <hr style={{width: '80%', margin: '8px auto', border: 'none', borderTop: '3px dashed #020202ff'}}/>
+            </div>
+
             <div className="container py-5">
-                
+
                 <div className="row mb-5">
                     <div className="col-md-10 col-xl-8 text-center mx-auto">
                         <div className="mb-4">
@@ -43,13 +48,6 @@ function ServicesAccueil(){
                                 votre transformation digitale et développer votre présence en ligne.
                             </p>
                         </div>
-                        
-                        <Link to="/ServicesScreens" className="fw-semibold text-decoration-none d-inline-flex align-items-center text-primary hover-link">
-                            <button className="btn btn-primary px-4 py-2 rounded-pill fw-semibold" type="button">
-                                Découvrir tous nos services&nbsp;
-                                <BsArrowRightShort size={20} />
-                            </button>
-                        </Link>
                     </div>
                 </div>
                 
@@ -71,6 +69,18 @@ function ServicesAccueil(){
                         </div>
                     </div>
                 </div>
+
+                <div className="row mb-5 py-5">
+                    <div className="col-md-10 col-xl-8 text-center mx-auto">
+                        <Link to="/ServicesScreens" className="fw-semibold text-decoration-none d-inline-flex align-items-center text-primary hover-link">
+                            <button className="btn btn-primary px-4 py-2 rounded-pill fw-semibold" type="button">
+                                Découvrir tous nos services&nbsp;
+                                <BsArrowRightShort size={20} />
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+
             </div>
         </section>
     )

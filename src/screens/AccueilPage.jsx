@@ -12,7 +12,7 @@ function AccueilPage(){
     return (
         <>
             <Navbar props="Accueil"/>
-            <section id="home" className="py-5 bg-light">
+            <section id="home" className="py-5 ">
                 <div className="container d-flex flex-column flex-md-row align-items-center gap-4">
                     <div className="col-md-6 text-center text-md-start">
                         <h1 className="display-5 fw-bold mb-3">
@@ -48,13 +48,15 @@ function AccueilPage(){
                             </figcaption>
                         </figure>
                     </div>
-                    <div className="section-divider"></div>
+                    
                 </div> 
+                <div className="py-5">
+                    <hr style={{width: '80%', margin: '8px auto', border: 'none', borderTop: '3px dashed #020202ff'}}/>
+                </div>
+                
             </section>
 
             <TextPresentation/>
-
-            <PresentationCard/>
             
             <ServicesAccueil/>
 
@@ -64,7 +66,7 @@ function AccueilPage(){
                 
             <Posts/>
 
-            <Footer props="Home"/>
+            <Footer props="Accueil"/>
         </>
     )
 }

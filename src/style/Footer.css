@@ -1,0 +1,117 @@
+:root {
+    --background: #F8FAFC;
+    --footer-bg: #1E293B;
+    --text-primary: #FFFFFF;
+    --text-secondary: #CBD5E1;
+    --accent: #3B82F6;
+    --accent-hover: #2563EB;
+    --border-color: #334155;
+    --card-bg: #334155;
+}
+
+.custom-footer {
+    background: linear-gradient(135deg, var(--footer-bg) 0%, #0F172A 100%);
+    padding: 3rem 0;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.custom-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-hover) 100%);
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+}
+
+.accent-text {
+    color: var(--accent);
+}
+
+.footer-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer-title {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+}
+
+.contact-info .contact-item strong {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    padding-left: 0;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    position: relative;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    color: var(--accent);
+    transform: translateX(3px);
+}
+
+.footer-link.active {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.footer-link.active::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--accent);
+}
+
+.footer-divider {
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0 1.5rem 0;
+    opacity: 0.6;
+}
+
+.custom-btn {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+    color: #fff;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.custom-btn:hover {
+    background: linear-gradient(135deg, var(--accent-hover) 0%, #1D4ED8 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+    color: #fff;
+}
+
+.small-links a {
+    font-size: 0.85rem;
+}
+
+
