@@ -37,7 +37,7 @@ function Article1(){
             </div>
 
             <InfoCard
-                src="/assets/img/services-expertises/Signature.jpg"
+                src="/assets/img/actualites/reforme.jpg"
                 alt="Signature d'un contrat juridique"
                 title="Réformes OHADA"
                 subtitle="Domaines d’intervention"
