@@ -37,8 +37,9 @@ function ServicesAccueil(){
                                 Nos Services
                             </h2>
                             <p className="lead text-muted mb-4">
-                                Des solutions complètes et innovantes pour accompagner 
-                                votre transformation digitale et développer votre présence en ligne.
+                                Une gamme complète de services juridiques adaptés à vos besoins :
+                                conseil, rédaction de contrats, contentieux, arbitrage et bien plus encore
+                                pour défendre et sécuriser vos activités.
                             </p>
                         </div>
                     </div>

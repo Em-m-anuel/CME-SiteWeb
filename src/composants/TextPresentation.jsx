@@ -8,12 +8,12 @@ function TextPresentation(){
                         <div className="text-center">
                             <h1 className="display-5 mb-4 heading">
                                 Nous sommes <strong>CME</strong> et nous<br/>
-                                <strong>Transformons vos Idées en Réalité</strong>
+                                <strong>Sécurisons vos Projets Juridiques</strong>
                             </h1>
                             <p className="mb-4 lead text-muted">
-                                Expertise technologique, innovation et créativité au service de votre réussite. 
-                                Découvrez comment nos solutions sur mesure peuvent propulser votre entreprise 
-                                vers de nouveaux sommets.
+                                Expertise en droit des affaires, conseil stratégique et accompagnement juridique
+                                pour protéger vos intérêts et anticiper vos risques. Ensemble, construisons
+                                un avenir conforme et sécurisé pour votre entreprise.
                             </p>
                         </div>
                     </div>

@@ -32,14 +32,14 @@ function ExpertiseAccueil(){
                     <div className="col-md-10 col-xl-8 text-center mx-auto">
                         <div className="mb-4">
                             <h2 className="display-6 fw-bold mb-4 text-primary">
-                                Expertises :
+                                Nos Expertises
                             </h2>
                             <p className="lead text-muted mb-4">
-                                Des solutions complètes et innovantes pour accompagner 
-                                votre transformation digitale et développer votre présence en ligne.
+                                Des compétences pointues en droit des sociétés, fusions-acquisitions,
+                                négociations contractuelles et règlement des litiges, pour vous offrir
+                                un accompagnement stratégique et sécurisé à chaque étape.
                             </p>
                         </div>
-                    
                     </div>
                 </div>
                 <div className="row">
