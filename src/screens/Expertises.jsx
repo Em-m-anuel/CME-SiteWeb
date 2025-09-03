@@ -2,44 +2,9 @@ import Navbar from "../composants/Navbar";
 import Footer from "../composants/Footer";
 import ExpertiseCard from "../composants/ExpertiseCard";
 import Title from "../composants/Title";
-import { FaBalanceScale, FaBuilding, FaHandshake, FaGavel } from "react-icons/fa";
+import { expertises } from "../data/expertises";
 
 function Expertises(){
-    const expertises = [
-  {
-    title: "Droit des Sociétés",
-    excerpt: "Structuration juridique des entreprises et optimisation de la gouvernance.",
-    imageUrl: "/assets/img/services-expertises/Reunion.jpg",
-    to: "/Expertises/Expertise1",
-    icon: <FaBuilding className="text-primary" size={35} />,
-    alt: "Signature de documents juridiques pour la création d'une société"
-  },
-  {
-    title: "Contrats & Négociations",
-    excerpt: "Sécurisation juridique des relations contractuelles et stratégie de négociation.",
-    imageUrl: "/assets/img/services-expertises/Signature.jpg",
-    to: "/Expertises/Expertise2",
-    icon: <FaHandshake className="text-primary" size={35} />,
-    alt: "Négociation et signature de contrats commerciaux entre deux parties"
-  },
-  {
-    title: "Contentieux & Arbitrage",
-    excerpt: "Gestion proactive des litiges et arbitrage national ou international.",
-    imageUrl: "/assets/img/services-expertises/Juge.jpg",
-    to: "/Expertises/Expertise3",
-    icon: <FaBalanceScale className="text-primary" size={35} />,
-    alt: "Représentation devant les juridictions lors d'un contentieux"
-  },
-  {
-    title: "Fusions & Acquisitions",
-    excerpt: "Accompagnement stratégique dans les opérations de croissance externe.",
-    imageUrl: "/assets/img/services-expertises/Signature2.jpg",
-    to: "/Expertises/Expertise4",
-    icon: <FaGavel className="text-primary" size={35} />,
-    alt: "Réunion d'experts pour une opération de fusion-acquisition d'entreprise"
-  }
-];
-
 
     return (
         <>

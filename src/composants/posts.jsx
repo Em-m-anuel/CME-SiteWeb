@@ -1,40 +1,22 @@
 import PostCard from "./postCard";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { postcards } from "../data/Actualites";
 function Posts(){
 
-    const posts=[
-        {className:"post-tag-design post-author-billy-thomas post-author-jenny-doe",
-            texth4:"Réforme OHADA : Ce que les entreprises doivent savoir" ,
-            textp:"Analyse des dernières modifications apportées à l'Acte uniforme OHADA et leurs impacts sur la gouvernance des entreprises." ,
-            alt:"Réforme OHADA" ,
-            src:"assets/img/projects/project1.webp" ,
-            time:"15 Mars, 2025" ,
-            datetime:"2025-03-15" ,
-            to:"/Blog/Article-1" ,
-            tags:["OHADA","Droit des sociétés"]
-        },
-        {className:"post-tag-design post-author-billy-thomas post-author-jenny-doe" ,
-            texth4:"Fiscalité 2025 : Nouvelles obligations pour les PME" ,
-            textp:"Découvrez les changements fiscaux en vigueur cette année et les stratégies pour rester en conformité."  ,
-            alt:"Réforme OHADA" ,
-            src:"assets/img/projects/project1.webp" ,
-            time:"15 Mars, 2025" ,
-            datetime:"2025-03-15" ,
-            to:"/Blog/Article-1" ,
-            tags:["Fiscalité","PME"]
-        },
-        {className:"post-tag-design post-author-billy-thomas post-author-jenny-doe" ,
-            texth4:"Protection des données : Comment éviter les sanctions ?"  ,
-            textp:"Les bonnes pratiques pour se conformer aux réglementations en matière de protection des données personnelles."  ,
-            alt:"Réforme OHADA" ,
-            src:"assets/img/projects/project1.webp" ,
-            time:"15 Mars, 2025" ,
-            datetime:"2025-03-15" ,
-            to:"/Blog/Article-1" ,
-            tags:["RGPD","Compliance"]
+    const [actualites,setActualites] =useState([]);
+    const randomActu = (tab,nbre =3) =>{
+        if (tab.length <= nbre){
+            return tab;
         }
-    ]
+        const randomActuX= [...tab].sort(()=>0.5-Math.random());
+        return randomActuX.slice(0,nbre);
+    }
+    useEffect(()=>{
+        const randomX=randomActu(postcards);
+        setActualites(randomX);
+    },[])
    
     return (
         <section className="py-5">
@@ -56,7 +38,7 @@ function Posts(){
                 </div>
                 <div data-bss-type="blog-loop">
                     <div className="row gy-3 row-cols-1 row-cols-md-2 row-cols-lg-3" data-bss-type="blog-loop-base">
-                        {posts.map((post)=>(
+                        {actualites.map((post)=>(
                             <PostCard
                             className={post.className}
                             texth4={post.texth4}

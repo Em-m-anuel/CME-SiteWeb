@@ -1,4 +1,5 @@
 import { BrowserRouter,Routes,Route} from 'react-router-dom';
+import RefreshScroll from './RefreshScroll';
 import AccueilPage from './screens/AccueilPage';
 import Contact from './screens/Contact';
 import Error404 from './screens/templatePages/404';
@@ -20,7 +21,7 @@ import Expertise4 from './screens/subScreens/Expertise4';
 function Router(){
     return (
         <BrowserRouter>
-
+            <RefreshScroll/>
             <Routes>
                 <Route path={"/" || "/Accueil"} element={<AccueilPage/>} />
                 <Route path={"/Contact"} element={<Contact/>} />
@@ -32,16 +33,15 @@ function Router(){
                 <Route path={"/About"} element={<About/>} />
                 <Route path={"/ServicesScreens"} element={<ServicesScreens/>} />
                 <Route path={"/Expertises"} element={<Expertises/>} />
-                <Route path={"/Expertises/Expertise1"} element={<Expertise1/>} />
-                <Route path={"/ServicesScreens/Service1"} element={<Service1/>} />
-                <Route path={"/ServicesScreens/Service2"} element={<Service2/>} />
-                <Route path={"/ServicesScreens/Service3"} element={<Service3/>} />
-                <Route path={"/ServicesScreens/Service4"} element={<Service4/>} />
-                <Route path={"/Expertises/Expertise2"} element={<Expertise2/>} />
-                <Route path={"/Expertises/Expertise3"} element={<Expertise3/>} />
-                <Route path={"/Expertises/Expertise4"} element={<Expertise4/>} />
+                <Route path={"/Expertises/Droits-Societes"} element={<Expertise1/>} />
+                <Route path={"/Expertises/Contrats-Negociations"} element={<Expertise2/>} />
+                <Route path={"/Expertises/Contentieux-Arbitrages"} element={<Expertise3/>} />
+                <Route path={"/Expertises/Fusions-Acquisitions"} element={<Expertise4/>} />
+                <Route path={"/ServicesScreens/Creation-Entreprises"} element={<Service1/>} />
+                <Route path={"/ServicesScreens/Audit-Juridique"} element={<Service2/>} />
+                <Route path={"/ServicesScreens/Redactions-Negociations"} element={<Service3/>} />
+                <Route path={"/ServicesScreens/Gestions-Litiges"} element={<Service4/>} />
             </Routes>
-            
         </BrowserRouter>
     )
 }

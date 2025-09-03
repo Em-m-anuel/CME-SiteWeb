@@ -1,32 +1,25 @@
 import { BsArrowRightShort } from "react-icons/bs";
-import { FaBuilding, FaHandshake, FaGavel } from "react-icons/fa";
 import ServicesCard from "./ServiceCard";
 import { Link } from "react-router-dom";
+import { services } from "../data/services";
+import { useState, useEffect } from "react";
 
 function ServicesAccueil(){
-    const services = [
-        {
-            title: "Droit des Sociétés",
-            description: "Création, restructuration et accompagnement juridique des entreprises.",
-            color: "bg-info-subtle",
-            icon: <FaBuilding className="text-primary" size={48} />,
-            to: "/ServicesScreens/Service1"
-        },
-        {
-            title: "Contrats & Négociations",
-            description: "Rédaction et sécurisation de vos contrats commerciaux et partenariats.",
-            color: "bg-success-subtle",
-            icon: <FaHandshake className="text-success" size={48} />,
-            to: "/ServicesScreens/Service2"
-        },
-        {
-            title: "Contentieux & Arbitrage",
-            description: "Représentation devant les juridictions et résolution des litiges.",
-            color: "bg-warning-subtle",
-            icon: <FaGavel className="text-danger" size={48} />,
-            to: "/ServicesScreens/Service3"
+
+    const [ServicesAccueil, SetService] =useState([]);
+
+    const randomServices = (tab,nbre = 3) =>{
+        if (tab.length <= nbre){
+            return tab;
         }
-    ];
+        const randomServicesX = [...tab].sort(()=>0.5-Math.random());
+        return randomServicesX.slice(0,nbre);
+    }
+
+    useEffect(()=>{
+        const serviceX = randomServices(services);
+        SetService(serviceX);
+    },[])
 
     return(
         <section className="py-5">
@@ -55,15 +48,19 @@ function ServicesAccueil(){
                 <div className="row">
                     <div className="col-xl-12 mx-auto">
                         <div className="row gy-5 row-cols-1 row-cols-md-3 mx-auto">
-                            {services.map((service, index) => (
+                            
+                            {ServicesAccueil.map((service, index) => (
                                 <div key={index} className="col">
-                                    <ServicesCard 
+                                    <Link to={service.to}>
+                                        <ServicesCard 
                                         className={`card ${service.color} border-0 h-100 shadow-sm`}
                                         title={service.title}
                                         description={service.description}
                                         icon={service.icon}
                                         to={service.to}
-                                    />
+                                        />
+                                    </Link>
+                                    
                                 </div>
                             ))}
                         </div>

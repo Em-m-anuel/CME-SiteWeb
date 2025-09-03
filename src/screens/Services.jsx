@@ -3,6 +3,7 @@ import Footer from "../composants/Footer";
 import ServicesCard from "../composants/ServiceCard";
 import Title from "../composants/Title";
 import { FaBalanceScale, FaBuilding, FaSearch,FaFileContract } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function ServicesScreens(){
     const services = [
     {
@@ -10,28 +11,28 @@ function ServicesScreens(){
         description: "Accompagnement pour la constitution et le lancement de votre société.",
         color: "bg-info-subtle",
         icon: <FaBuilding className="text-primary" size={48} />,
-        to: "/ServicesScreens/Service1"
+        to: "/ServicesScreens/Creation-Entreprises"
     },
     {
         title: "Audit Juridique",
         description: "Diagnostic complet pour sécuriser vos opérations et prévenir les risques.",
         color: "bg-success-subtle",
         icon: <FaSearch className="text-success" size={48} />,
-        to: "/ServicesScreens/Service2"
+        to: "/ServicesScreens/Audit-Juridique"
     },
     {
         title: "Rédaction & Négociation de Contrats",
         description: "Rédaction sur-mesure et sécurisation juridique de vos accords.",
         color: "bg-warning-subtle",
         icon: <FaFileContract className="text-warning" size={48} />,
-        to: "/ServicesScreens/Service3"
+        to: "/ServicesScreens/Redactions-Negociations"
     },
     {
         title: "Gestion des Litiges",
         description: "Représentation devant les juridictions et solutions amiables.",
         color: "bg-danger-subtle",
         icon: <FaBalanceScale className="text-danger" size={48} />,
-        to: "/ServicesScreens/Service4"
+        to: "/ServicesScreens/Gestions-Litiges"
     }
 ];
 
@@ -61,13 +62,15 @@ function ServicesScreens(){
                             <div className="row g-5 row-cols-1 row-cols-md-2 mx-auto">
                                 {services.map((service, index) => (
                                     <div key={index} className="col">
-                                        <ServicesCard 
+                                        <Link to={service.to}>
+                                            <ServicesCard 
                                             className={`card ${service.color} border-0 h-100 shadow-sm`}
                                             title={service.title}
                                             description={service.description}
                                             icon={service.icon}
                                             to={service.to}
-                                        />
+                                            />
+                                        </Link>
                                     </div>
                                 ))}
                             </div>

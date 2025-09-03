@@ -1,36 +1,27 @@
 import ExpertiseCard from "./ExpertiseCard";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { FaBuilding, FaHandshake, FaBalanceScale } from "react-icons/fa";
+import { expertises } from "../data/expertises";
+import { useState, useEffect } from "react";
 
 function ExpertiseAccueil(){
 
-    const expertises = [
-        {
-    title: "Droit des Sociétés",
-    excerpt: "Structuration juridique des entreprises et optimisation de la gouvernance.",
-    imageUrl: "/assets/img/services-expertises/Reunion.jpg",
-    to: "/Expertises/Expertise1",
-    icon: <FaBuilding className="text-primary" size={35} />,
-    alt: "Signature de documents juridiques pour la création d'une société"
-  },
-  {
-    title: "Contrats & Négociations",
-    excerpt: "Sécurisation juridique des relations contractuelles et stratégie de négociation.",
-    imageUrl: "/assets/img/services-expertises/Signature.jpg",
-    to: "/Expertises/Expertise2",
-    icon: <FaHandshake className="text-primary" size={35} />,
-    alt: "Négociation et signature de contrats commerciaux entre deux parties"
-  },
-  {
-    title: "Contentieux & Arbitrage",
-    excerpt: "Gestion proactive des litiges et arbitrage national ou international.",
-    imageUrl: "./assets/img/services-expertises/Juge.jpg",
-    to: "/Expertises/Expertise3",
-    icon: <FaBalanceScale className="text-primary" size={35} />,
-    alt: "Représentation devant les juridictions lors d'un contentieux"
-  }
-    ];
+    const [ExpertiseAccueil,SetExpertise] = useState([]);
+
+    const randomExpertise = (tab,nbre = 3) =>{
+        if (tab.length <= nbre) {
+            return tab;
+        }
+
+        const random = [...tab].sort(()=>0.5-Math.random());
+        return random.slice(0,nbre)
+    }
+
+    useEffect(() =>{
+        const randomExpertiseX = randomExpertise(expertises);
+        SetExpertise(randomExpertiseX); 
+    },[])
+
     return (
         <section>
             <div className="py-5">
@@ -54,7 +45,7 @@ function ExpertiseAccueil(){
                 <div className="row">
                     <div className="col col-xl-12 mx-auto">
                         <div className="row gy-4 row-cols-1 row-cols-md-3 mx-auto">
-                           {expertises.map((expertise, index) => (
+                           {ExpertiseAccueil.map((expertise, index) => (
                                 <div key={index} className="col">
                                     <ExpertiseCard 
                                         imageUrl={expertise.imageUrl}

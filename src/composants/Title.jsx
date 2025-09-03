@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import '../style/Title.css';
 
 function Title({ texth1, links = null, bgImage }) {
   return (

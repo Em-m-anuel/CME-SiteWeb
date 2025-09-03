@@ -1,0 +1,6 @@
+.title-section .breadcrumb-item + .breadcrumb-item::before {
+  content: "››"; /* Séparateur personnalisé */
+  color: #f8f9fa; /* Même couleur que le texte */
+  font-weight: bold;
+  padding: 0 8px;
+}
