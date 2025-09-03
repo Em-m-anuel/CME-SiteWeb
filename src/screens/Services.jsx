@@ -1,6 +1,6 @@
 import Navbar from "../composants/Navbar";
 import Footer from "../composants/Footer";
-import ServicesCard from "../composants/ServiceCard";
+import ServicesCard from "../composants/serviceCard";
 import Title from "../composants/Title";
 import { FaBalanceScale, FaBuilding, FaSearch,FaFileContract } from "react-icons/fa";
 import { Link } from "react-router-dom";

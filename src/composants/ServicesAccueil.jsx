@@ -1,5 +1,5 @@
 import { BsArrowRightShort } from "react-icons/bs";
-import ServicesCard from "./ServiceCard";
+import ServicesCard from "./serviceCard";
 import { Link } from "react-router-dom";
 import { services } from "../data/services";
 import { useState, useEffect } from "react";

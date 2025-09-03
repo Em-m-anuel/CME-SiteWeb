@@ -5,7 +5,6 @@ import TextPresentation from "../composants/TextPresentation";
 import Posts from "../composants/posts";
 import TeamPresentation from "../composants/teamPresentation";
 import { Link } from "react-router-dom";
-import PresentationCard from "../composants/PresentationCard";
 import ExpertiseAccueil from "../composants/ExpertisesAccueil";
 
 function AccueilPage(){
