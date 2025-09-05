@@ -53,23 +53,23 @@ function AboutSection(){
                             src="/assets/img/services-expertises/Groupe1.jpg"
                             alt="Cabinet"
                             className="img-fluid rounded shadow-lg"
-                            style={{ width: "300px", transition: "0.5s" }}
+                            style={{ width: "100%", height: "360px", objectFit: "cover"  }}
                         />
                     </div>
                 </section>
 
-                <section className="row align-items-center mb-5">
+                <section className="row align-items-center mb-5 py-5">
                     <div className="col-md-6 text-center mb-4 mb-md-0">
                         <img
                             src="/assets/img/services-expertises/Groupe1.jpg"
                             alt="Notre Mission"
                             className="img-fluid rounded shadow-lg"
-                            style={{ width: "300px" }}
+                            style={{ width: "100%", height: "360px", objectFit: "cover" }}
                         />
                     </div>
 
                     <div className="col-md-6">
-                        <span className="text-primary fw-semibold d-block mb-2">
+                        <span className="text-primary fw-semibold d-block mb-3">
                             Notre Mission
                         </span>
                         <h2 className="fw-bold mb-3">Protéger vos intérêts</h2>

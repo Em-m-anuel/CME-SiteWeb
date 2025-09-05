@@ -1,8 +1,8 @@
 import Team from "./team";
 function TeamPresentation(){
     return (
-        <section className="py-5 "> 
-                <div className="py-5">
+        <section> 
+                <div>
                     <hr style={{width: '80%', margin: '8px auto', border: 'none', borderTop: '3px dashed #020202ff'}}/>
                 </div>
 

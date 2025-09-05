@@ -3,6 +3,7 @@ import Navbar from "../composants/Navbar";
 import Footer from "../composants/Footer";
 import Title from "../composants/Title";
 import { postcards } from "../data/Actualites";
+import '../style/Blog.css';
 
 
 function Blog(){
@@ -56,33 +57,6 @@ function Blog(){
                     <hr style={{width: '80%', margin: '8px auto', border: 'none', borderTop: '3px dashed #020202ff'}}/>
                 </div>
             </section>
-
-            <style jsx>
-                {`
-                .hover-link {
-                    transition: all 0.3s ease;
-                }
-                .hover-link:hover {
-                    color: var(--bs-primary) !important;
-                    transform: translateX(4px);
-                }
-                .arrow-icon {
-                    transition: transform 0.3s ease;
-                }
-                .hover-link:hover .arrow-icon {
-                    transform: translateX(4px);
-                }
-                .card {
-                    transition: all 0.3s ease;
-                }
-                .card:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-                }
-                .letter-spacing-1 {
-                    letter-spacing: 1px;
-                }
-            `}</style> 
 
             <Footer props="Actualites"/>
         </>

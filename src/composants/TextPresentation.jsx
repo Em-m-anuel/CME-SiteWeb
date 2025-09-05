@@ -1,10 +1,10 @@
 function TextPresentation(){
     return (
         <section >
-            <div className="container pt-4 pt-xl-5">
+            <div className="container pt-2 pt-xl-5">
                 
                 <div className="row mb-5">
-                    <div className="col-md-10 col-lg-8 text-center text-md-start mx-auto">
+                    <div className="col-md-10 col-lg-8  text-md-start mx-auto">
                         <div className="text-center">
                             <h1 className="display-5 mb-4 heading">
                                 Nous sommes <strong>CME</strong> et nous<br/>

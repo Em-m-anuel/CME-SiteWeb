@@ -16,9 +16,6 @@ function PresentationCard(){
                             height: "400px"
                         }}
                         ></div>
-                        <figcaption className="text-muted mt-2">
-                            Image du maître
-                        </figcaption>
                     </figure>
                 </div>
                 

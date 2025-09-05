@@ -24,7 +24,7 @@ function ExpertiseAccueil(){
 
     return (
         <section>
-            <div className="py-5">
+            <div>
                 <hr style={{width: '80%', margin: '8px auto', border: 'none', borderTop: '3px dashed #020202ff'}}/>
             </div>
             <div className="container py-5">
@@ -61,7 +61,7 @@ function ExpertiseAccueil(){
                     </div>
                 </div>
 
-                <div className="row mb-5 py-5">
+                <div className="row mb-5 pt-5">
                     <div className="col-md-10 col-xl-8 text-center mx-auto">
                         <Link to="/Expertises" className="fw-semibold text-decoration-none d-inline-flex align-items-center text-primary hover-link">
                             <button className="btn btn-primary px-4 py-2 rounded-pill fw-semibold" type="button">

@@ -42,9 +42,6 @@ function AccueilPage(){
                                 height: "400px"
                             }}
                             ></div>
-                            <figcaption className="text-muted mt-2">
-                                Balance de justice symbolisant l’expertise de CME
-                            </figcaption>
                         </figure>
                     </div>
                     

@@ -10,8 +10,8 @@ function Contactform({texth1, textp, textb}){
                     </div>
                 </div>
                 <div className="row d-flex justify-content-center">
-                    <div className="col-md-8 col-lg-6 col-xl-5 col-xxl-4">
-                        <div className="card shadow-sm border-0">
+                    <div className="col-md-10 col-lg-8 col-xl-10 col-xxl-7">
+                        <div className="card shadow-sm border border-2 border-secondary-subtle bg-white">
                             <div className="card-body p-4">
                                 <form method="post">
                                     <div className="mb-4">
