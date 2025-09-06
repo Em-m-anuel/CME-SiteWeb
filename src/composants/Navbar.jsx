@@ -119,7 +119,7 @@ function Navbar({ props }) {
    
             <Link 
               className="btn custom-btn ms-lg-3 px-3 py-2" 
-              to="tel:+24107887872"
+              to="#"
               onClick={closeMenu}
             >
               <FaPhoneAlt className="me-2" /> +241 078 87 87 20

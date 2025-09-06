@@ -130,12 +130,12 @@
         font-size: 1.5rem;
     }
     
-    /* Afficher le bouton hamburger sur mobile */
+   
     .custom-toggler {
         display: block;
     }
     
-    /* Menu déroulant responsive */
+   
     .navbar-collapse {
         position: absolute;
         top: 100%;
